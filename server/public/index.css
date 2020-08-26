@@ -1,0 +1,127 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+}
+.main__root{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    height:100vh;
+}
+
+.main__root_lottie{
+    width : 40%;
+}
+.main__root_prograss_bar{
+    width : 60%;
+}
+#prograss__bar{
+    height: 100%;
+}
+.subject{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.subject__title{
+    width: 60vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 110, 14);
+}
+.subject__photo{
+    display: flex;
+}
+.subject__photo > div{ 
+    width: 30vw;
+    margin: 10px;
+}
+.subject__photo > div > img {
+    width: 100%;
+}
+.photo__img{
+    position: relative;
+    cursor: pointer;
+    height: 400px;
+    overflow: hidden;
+}
+.photo__img > div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.photo__img:hover > img  {
+    opacity: 0.3;
+}
+.photo__img_content{
+    opacity: 0;
+}
+.photo__img:hover .photo__img_content{
+    opacity: 1;
+}
+.photo__img_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.piano__rows{
+    display: block;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.piano__content{
+    display: block;
+    width: 30%;
+    height: 200px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.piano__content img {
+    width: 100%;
+    opacity: 0.7;
+}
+.piano__content:hover img{
+    opacity: 0.3;
+    transition: all linear 0.5s;
+}
+.piano__content span{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 1;
+    font-size: 15px;
+}
+.piano__content:hover span{
+    opacity: 1;
+}
+.piano__root{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
