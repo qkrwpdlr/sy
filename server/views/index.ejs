@@ -211,6 +211,7 @@
                     <img src="https://lh3.googleusercontent.com/proxy/Qt24Ilu72e53maUNpvgsicTF3KMp3MygupKUXhmw7nl4aFWID8xatGTOp2-4WFG7elgRYLaoKIqPkHO_qO9uXEMSBl2BipQ1TAo5gTJ8KyO2bTFN4xkZ4MxiT8usItGT1PZuhkfsEguJKiGQVatHjb-Wy64T1uHcTZ6FxR8xCtupXRYUyRWortwNDdKqBxzKtLRqTJItfcOfoSSRJR5LWkd7LTJ6pQj8B3m4tflrm3fLffCffr1hFogs7XgPJjHZ0Sp2h5AEY-LPDHGCklBN"
                         alt="">
                 </div>
+                
                 <div class="piano__content">
                     <span>
                         보노보노의 책
@@ -218,6 +219,17 @@
                     <img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile9.uf.tistory.com%2Fimage%2F9968F533599270E503E2DD"
                         alt="">
                 </div>
+                
+                <% for( var i = 0 ; i < rows.length; i++){ %>
+                    <div class="piano__content">
+                        <span>
+                            <%=rows[i].title%>
+                        </span>
+                        <img src="<%=rows[i].img%>" alt="">
+                    </div>
+                <%}%>
+
+
             </div>
 
         </div>

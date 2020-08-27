@@ -6,12 +6,12 @@ var db= new sqlite3.Database('data.db');
 /* GET home page. */
 
 router.get("/", function (req, res, next) {
-  const query = `select * from board `;
+  const query = `select * from board where type_code=1 `;
   db.serialize(function () {
-    db.all("query", function (err, rows) {
+    db.all(query, function (err, rows) {
       if (err) res.status(500).send("db")
       else {console.log(rows[0])
-        res.render("all", { datas: rows })}
+        res.render("index", { rows })}
     })
   })
 })
