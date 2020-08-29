@@ -11,7 +11,8 @@ router.get("/", function (req, res, next) {
     db.all(query, function (err, rows) {
       if (err) res.status(500).send("db")
       else {console.log(rows[0])
-        res.render("index", { rows })}
+
+        res.render("index", { rows, rowsInt:parseInt(rows.length/5), rest: rows.length%5})}
     })
   })
 })

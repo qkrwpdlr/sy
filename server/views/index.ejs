@@ -220,17 +220,49 @@
                         alt="">
                 </div>
                 
-                <% for( var i = 0 ; i < rows.length; i++){ %>
-                    <div class="piano__content">
-                        <span>
-                            <%=rows[i].title%>
-                        </span>
-                        <img src="<%=rows[i].img%>" alt="">
-                    </div>
-                <%}%>
+
 
 
             </div>
+        
+            <%for( var b = 0 ; b < rowsInt; b++){%>
+                <div class="piano__rows">
+                    <%for (var a=0; a < 5; a++){%>
+                        <div class="piano__content">
+                            <span>
+                                <%=rows[(5*b)+a].title%> 
+                            </span>
+                            <img src="<%=rows[(5*b)+a].img%>" alt="">
+                        </div>
+                            
+                    <%}%>
+    
+                </div>
+            <%}%>
+            <% if (rest>0) {%>
+                <div class="piano__rows">
+                    <% for (var h=0; h <rest; h++){ %>
+                        <div class="piano__content">
+                            <span>
+                                <%=rows[5*rowsInt+h].title%>
+                            </span>
+                            <img src="<%rows[5*rowsInt+h].img%>" alt="">
+
+                        </div>
+
+                    <%}%>
+
+
+                </div>
+                
+            <%}%>
+
+            
+
+            
+            
+ 
+
 
         </div>
     </div>
