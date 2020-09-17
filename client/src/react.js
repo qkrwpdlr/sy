@@ -29,7 +29,7 @@ const PrograssBar = ({ title, prograss }) => {
                     marginTop: '10px',
                     marginBottom: '10px',
                     borderRadius: '10px',
-                    cursor : "pointer"
+                    cursor: "pointer"
                 }}
         >
             <div style={{

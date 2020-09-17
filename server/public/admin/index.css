@@ -1,0 +1,35 @@
+.err {
+    background-color: rgb(255, 112, 112)
+}
+
+.form__content {
+    display: block;
+    width: 60vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form__content input {
+    outline: none;
+    font-size: 20px;
+    width: 100%;
+}
+
+.form__content span {
+    font-size: 20px;
+    display: block
+}
+
+#root {
+    width: 80vw;
+    height: 100vh;
+    margin-left: 10vw;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
