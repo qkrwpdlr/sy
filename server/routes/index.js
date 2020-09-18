@@ -24,7 +24,17 @@ router.get("/admin", function (req, res, next) {
 router.post("/admin",function (req, res, next){
   if(req.body.pw !== SECRET_KEY) res.send("Error")
   else{
-    res.send("goood")
+    var title = req.body.title;
+    var content= req.body.content;
+    var imgURL=req.body.img;
+    var type_code=req.body.type_code;
+    var q= `insert into board(title,content,img,type_code) values("${title}","${content}","${imgURL}",${type_code});`
+    db.run(q,function(err){
+      if (err) res.status(400).send("db Err")
+      else res.send("good")
+    })
+
+   
   }
 })
 module.exports = router;
